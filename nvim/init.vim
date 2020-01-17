@@ -26,17 +26,18 @@ Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 
 " setings for mac
+if has('mac')
+        " COC code complete
+        " Use release branch
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        " Or latest tag
+        "Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+        " Or build from source code by use yarn: https://yarnpkg.com
+        "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
-" COC code complete
-" Use release branch
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Or latest tag
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-" Or build from source code by use yarn: https://yarnpkg.com
-"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-
-" Dash doc lookup
-"Plug 'rizzatti/dash.vim'
+        " Dash doc lookup
+        Plug 'rizzatti/dash.vim'
+endif
 
 
 
