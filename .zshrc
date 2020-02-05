@@ -126,7 +126,7 @@ export PYTHONPATH="$PYTHONPATH:/Users/chriswoodall/spark/latest/python"
 export PYSPARK_PYTHON="/usr/local/bin/python3"
 alias python="python3"
 alias flake8='function _flake8(){ flake8 --max-line-length=121 $1;};_flake8' 
-alias pipreal='function _pipreal(){ pip install -i https://pypi.python.org/simple/ $1; };_pipreal'
+alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simple/ $1; };_pipreal'
 
 # GO 
 export GOPATH=$HOME/dev 
