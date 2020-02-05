@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 "
 " colors
-Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'patstockwell/vim-monokai-tasty'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
