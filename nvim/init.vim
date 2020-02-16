@@ -28,6 +28,9 @@ Plug 'itchyny/lightline.vim'
 " git gutter
 Plug 'airblade/vim-gitgutter'
 
+"autoformat
+Plug 'Chiel92/vim-autoformat'
+
 " setings for mac
 if has('mac')
         " COC code complete
@@ -40,6 +43,13 @@ if has('mac')
 
         " Dash doc lookup
         Plug 'rizzatti/dash.vim'
+        Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
+        " autoformat python code
+        Plug 'psf/black.vim'
+else
+        "linting
+        Plug 'dense-analysis/ale'
 endif
 
 
