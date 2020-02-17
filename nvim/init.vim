@@ -16,7 +16,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Sematic highlighting
-" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'sheerun/vim-polyglot'
+Plug 'sudar/vim-arduino-syntax'
+
+" Autocomplete 
+" Plug 'Shougo/deoplete.nvim'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -30,6 +34,8 @@ Plug 'airblade/vim-gitgutter'
 
 "autoformat
 Plug 'Chiel92/vim-autoformat'
+
+Plug 'machakann/vim-sandwich'
 
 " setings for mac
 if has('mac')
