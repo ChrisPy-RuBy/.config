@@ -40,6 +40,7 @@ git clone <config repo>
 brew cask install iterm
 ### setup profiles
 import itemprofile from .config
+import keybindings from .config
 
 ### set up guake like drop downs.
 (https://www.sharmaprakash.com.np/guake-like-dropdown-terminal-in-mac/#)
@@ -48,6 +49,9 @@ import itemprofile from .config
 brew install neovim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# setup tmux
+brew install tmux
 
 # setup python
 
@@ -64,6 +68,8 @@ brew install mkdocs
 cd ~; mkdocs new labbook
 
 # apps to install
-alfred
+- alfred
 brew install cask alfred
+brew install cask things3
+brew install cask dash
 
