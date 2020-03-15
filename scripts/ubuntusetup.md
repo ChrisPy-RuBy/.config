@@ -18,3 +18,7 @@ ls
 sudo apt-get install fonts-powerlin
 sudo apt-get install fonts-powerline
 
+
+# networking tools
+## get netstat and the such
+sudo apt-get install net-tools
