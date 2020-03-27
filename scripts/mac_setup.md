@@ -36,8 +36,11 @@ pbcopy < ~/.ssh/id_rsa.pub
 ```
 if we don't
 ```
-ssh-keygen -t rsa -b 4096 -C "christopherhwoodall@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "<derp>@gmail.com"
 ```
+
+## Get access to the relevant git repos
+- add ssh key to account
 
 ## clone setup repos
 ```
@@ -61,12 +64,16 @@ Really hoping this is all in the .config
 
 
 # setup vim
+```
 brew install neovim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
 # setup tmux
+```
 brew install tmux
+```
 
 # setup python
 
