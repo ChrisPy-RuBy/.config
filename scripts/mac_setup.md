@@ -26,26 +26,41 @@ brew install ruby
 brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# setup git to basic repos
-# if we have an ssh key
-# pbcopy < ~/.ssh/id_rsa.pub
-# else
+# setup git 
+
+## generate a ssh key
+
+if we have an ssh key
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
+if we don't
+```
 ssh-keygen -t rsa -b 4096 -C "christopherhwoodall@gmail.com"
+```
 
-# clone setup repos
+## clone setup repos
+```
 cd ~
-git clone <config repo>
+git clone git@github.com:ChrisPy-RuBy/.config.git
+```
 
-## download iterm
+# setup iterm
+```
 brew cask install iterm
-### setup profiles
+```
+## setup profiles
 import itemprofile from .config
 import keybindings from .config
 
-### set up guake like drop downs.
+## setup guake like drop downs.
 (https://www.sharmaprakash.com.np/guake-like-dropdown-terminal-in-mac/#)
 
-# set up vim
+## setup up powerline
+Really hoping this is all in the .config
+
+
+# setup vim
 brew install neovim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -61,6 +76,7 @@ brew install tmux
 
 # useful commandline tools
 brew install ag
+brew install FZF
 
 
 # set labbook
@@ -69,7 +85,19 @@ cd ~; mkdocs new labbook
 
 # apps to install
 - alfred
+- anki
+- slack
+- firefox
 brew install cask alfred
 brew install cask things3
 brew install cask dash
+
+# setup firefox
+- get pocket 
+- get lastpass
+
+## firefox plugins
+- privacy badger
+- rescuetime
+- 
 
