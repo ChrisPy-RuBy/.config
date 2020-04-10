@@ -1,5 +1,6 @@
 # run on startup
 python ~/.config/scripts/days_left.py
+alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/scripts/labbook_directions.py"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -132,7 +133,7 @@ alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simp
 export GOPATH=$HOME/dev 
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
 
