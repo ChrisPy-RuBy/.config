@@ -62,6 +62,9 @@ import keybindings from .config
 ## setup up powerline
 Really hoping this is all in the .config
 
+# setup ssh
+
+enable ssh on Mac. Sharing preferences, allow remote access
 
 # setup vim
 ```
