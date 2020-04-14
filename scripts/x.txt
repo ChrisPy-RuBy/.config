@@ -1,0 +1,1 @@
+alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/scripts/labbook_directions.py"
