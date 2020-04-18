@@ -32,7 +32,8 @@ Plug 'itchyny/lightline.vim'
 " git gutter
 Plug 'airblade/vim-gitgutter'
 
-"autoformat
+" Formatting etc
+" autoformat
 Plug 'Chiel92/vim-autoformat'
 
 Plug 'machakann/vim-sandwich'

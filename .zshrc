@@ -1,9 +1,9 @@
-# run on startup
-python ~/.config/scripts/days_left.py
-alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/scripts/labbook_directions.py"
+#########################
+## THINGS TO DO FIRST ###
+#########################
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -13,19 +13,17 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+#####################################
+## GENERAL SCRIPTS TO LOAD OR RUN ###
+#####################################
 
 #include Z
 . ~/.config/scripts/z.sh
 
+# run on startup
+days_left
+alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/scripts/labbook_directions.py"
+alias month="cal -A 1 -B 1"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -104,23 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # use nvim instead of vim for a sprint
 alias vim='nvim'
 alias v='nvim'
-
-#sublime
 export EDITOR='vim'
 
 #export PSQL_EDITOR="/Users/username/bin/
 
-# Basic Functions
-alias hist='function _hist(){ history | grep $1;};_hist' 
-alias month="cal -A 1 -B 1"
-
-#### Terminal Setup shizzle ####
-# fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+################################
+### LANGUAGE SPECIFIC STUFF  ### 
+################################
 
 
-#### Language Shizzle #### 
-# Python 
 alias ip='ipython'
 export PYTHONBREAKPOINT='ipdb.set_trace'
 export PYTHONPATH="$PYTHONPATH:/Users/chriswoodall/spark/latest/python"
@@ -128,6 +118,9 @@ export PYSPARK_PYTHON="/usr/local/bin/python3"
 alias python="python3"
 alias flake8='function _flake8(){ flake8 --max-line-length=121 $1;};_flake8' 
 alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simple/ $1; };_pipreal'
+export PATH="/Users/chriswoodall/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # GO 
 export GOPATH=$HOME/dev 
@@ -136,38 +129,20 @@ export GOPATH=$HOME/dev
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
+##############################
+### TOOL SPECIFIC SETTINGS ###
+##############################
 
-# Work
-alias jqtmux='tmux a -t jq'
-alias ls='ls -GFh'
-alias a="cd ~/dev/tvsquared-ansible/"
-alias b="cd ~/dev/tvsquared-backend/"
-alias f="cd ~/dev/tvsquared-frontend/"
-alias c="cd ~/dev/tvsquared-common/"
-alias d="cd ~/Downloads"
-alias adhoc="ssh -t backend@adhoc.prod.tvsquared.private"
-alias prodjq="ssh -t backend@backend.prod.tvsquared.private 'cd backend  &&  python -m tvsquared.tools.jobqueue show'"
-alias preprodjq="ssh -t backend@backend.preprod.tvsquared.private 'cd backend  &&  python -m tvsquared.tools.jobqueue show'"
-alias restartjq="b;python3 -m tvsquared.tools.jobqueue stop;python3 -m tvsquared.tools.jobqueue cleanlocks;python3 -m tvsquared.tools.jobqueue start;python3 -m tvsquared.jobqueue.execute -vv dev;"
-alias phpocjq="ssh -t backend@backend.prehulupoc.tvsquared.private 'cd backend  &&  python -m tvsquared.tools.jobqueue show'"
-alias pprevjq="ssh -t backend@backend.preprev.tvsquared.private 'cd backend  &&  python -m tvsquared.tools.jobqueue show'"
-alias prod="ssh -t backend@backend.prod.tvsquared.private"
-alias preprod="ssh -t backend@backend.preprod.tvsquared.private"
-alias preprev="ssh -t backend@backend.preprev.tvsquared.private"
-alias preold="ssh -t backend@backend.preold.tvsquared.private"
-alias showjq="b;python -m tvsquared.tools.jobqueue show"
-alias runlocalhost="f; git pull; fab rungridserver & fab runserverwithoutupgrade;"
-alias getall="f; echo Getting frontend.....;git pull; b; echo Getting backend......; git pull; c; echo Getting common.....;git pull; b; a; echo Getting ansible.....;git pull;b;"
-alias collector="bash ~/scripts/collector?.sh"
-alias collectordata='bash ~/dev/tvsquared-backend/tvsquared/tmp/cw/tools/bash/tng_data_copy.sh'
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#export PYSPARK_SUBMIT_ARGS="--master local[2] pyspark-shell"
-#export PYSPARK_PYTHON=/usr/local/bin/python2
+###########################################
+### WORK SPECIFIC ALIASES, FUNCTIONS ETC ##
+###########################################
 
-#export PYTHONPATH="/Users/chriswoodall/spark/latest/python"
-#export SPARK_HOME=/Users/chriswoodall/spark/latest/bin
-
-
+# NOTE: The bulk of this has been moved to ~/.aliases/tvs.zsh and symlinked 
+# to the custom folder
 
 #spark hacking
 #export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
@@ -176,19 +151,17 @@ alias collectordata='bash ~/dev/tvsquared-backend/tvsquared/tmp/cw/tools/bash/tn
 #export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
 #export PYSPARK_SUBMIT_ARGS=pyspark-shell
 
-#dbaliases
 
-alias backendprod1="pgcli -h backendpg1-prod.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres"
-alias backendprod2="pgcli -h backendpg2-prod.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres"
-alias backendpreprod='pgcli -h backendpg1-preprod.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres'
-alias backendpreold='pgcli -h backendpg1-preold.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres'
-alias backendprodclones1="pgcli -h backendpgclones1-prod.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres"
-alias backendpreprev1='pgcli -h backendpg1-preprev.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres'
-alias backendpreprev2='pgcli -h backendpg2-preprev.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres'
-alias backendprehalo='pgcli -h backendpg1-prehalo.ciepqiqtkoex.eu-west-1.rds.amazonaws.com -U analysis postgres'
+#####################
+## TEMPORARY HACKERY (DONT PUT THINGS HERE YOU WANT TO KEEP) 
+#####################
+#
+#export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib":$DYLD_FALLBACK_LIBRARY_PATH
+#export HADOOP_VERSION=3.2.1
+export HADOOP_HOME=/usr/local/Cellar/hadoop/3.2.1_1/libexec
+#export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop/
+#export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH="/Users/chriswoodall/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
+export HADOOP_OPTS="-Djava.library.path=${HADOOP_HOME}/lib/native"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HADOOP_HOME}/lib/native
+export JAVA_LIBRARY_PATH=$JAVA_LIBRARY_PATH:${HADOOP_HOME}/lib/native
