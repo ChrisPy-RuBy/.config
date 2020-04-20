@@ -85,7 +85,8 @@ brew install tmux
 # install postgres
 
 # useful commandline tools
-brew install ag
+## ag
+brew install the_silver_searcher
 brew install FZF
 
 

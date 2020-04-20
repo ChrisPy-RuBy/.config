@@ -22,7 +22,7 @@ ZSH_THEME="agnoster"
 
 # run on startup
 days_left
-alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/scripts/labbook_directions.py"
+alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
 alias month="cal -A 1 -B 1"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -118,6 +118,7 @@ export PYSPARK_PYTHON="/usr/local/bin/python3"
 alias python="python3"
 alias flake8='function _flake8(){ flake8 --max-line-length=121 $1;};_flake8' 
 alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simple/ $1; };_pipreal'
+
 # GO 
 export GOPATH=$HOME/dev 
 
