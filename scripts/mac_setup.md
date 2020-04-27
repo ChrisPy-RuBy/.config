@@ -85,7 +85,7 @@ brew install tmux
 # install postgres
 
 # useful commandline tools
-brew install ag
+brew install the-silver-surfer-ag
 brew install FZF
 
 
@@ -101,6 +101,8 @@ cd ~; mkdocs new labbook
 brew install cask alfred
 brew install cask things3
 brew install cask dash
+# must remember to allow security access in 
+brew install cask virtualbox
 
 # setup firefox
 - get pocket 
@@ -109,5 +111,5 @@ brew install cask dash
 ## firefox plugins
 - privacy badger
 - rescuetime
-- 
+- blocksite
 
