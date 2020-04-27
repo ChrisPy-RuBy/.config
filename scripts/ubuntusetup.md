@@ -22,3 +22,7 @@ sudo apt-get install fonts-powerline
 # networking tools
 ## get netstat and the such
 sudo apt-get install net-tools
+
+
+# general commandline tools
+sudo apt-get install silversearch-ag
