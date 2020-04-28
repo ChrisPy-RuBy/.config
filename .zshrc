@@ -23,7 +23,9 @@ ZSH_THEME="agnoster"
 # run on startup
 days_left
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
+alias bd='~/labbook/docs/braindump.md'
 alias month="cal -A 1 -B 1"
+
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -123,7 +125,7 @@ alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simp
 export GOPATH=$HOME/dev 
 
 # Java
-#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
 ##############################
@@ -155,10 +157,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #
 #export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib":$DYLD_FALLBACK_LIBRARY_PATH
 #export HADOOP_VERSION=3.2.1
-export HADOOP_HOME=/usr/local/Cellar/hadoop/3.2.1_1/libexec
+#export HADOOP_HOME=/usr/local/Cellar/hadoop/3.2.1_1/libexec
 #export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop/
 #export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 
-export HADOOP_OPTS="-Djava.library.path=${HADOOP_HOME}/lib/native"
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HADOOP_HOME}/lib/native
-export JAVA_LIBRARY_PATH=$JAVA_LIBRARY_PATH:${HADOOP_HOME}/lib/native
+#export HADOOP_OPTS="-Djava.library.path=${HADOOP_HOME}/lib/native"
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HADOOP_HOME}/lib/native
+#export JAVA_LIBRARY_PATH=$JAVA_LIBRARY_PATH:${HADOOP_HOME}/lib/native
