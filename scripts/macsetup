@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Linking .zshrc"
+ln -sf ~/.config/.zshrc ~/.zshrc
+echo "Linking .vimrc"
+ln -sf ~/.config/.vimrc ~/.vimrc
+
+BREW_PACKAGES=(
+        "aspell" 
+        "fzf"
+        "htop" 
+        "mkdocs"
+        "postgres"
+        "shellcheck"
+        "the_silver_searcher"
+        "tmux" 
+)
+
+BREW_CASKS=(
+        "alfred"
+        "dash"
+        "things3"
+        "virtualbox"
+)
+
+for package in ${BREW_PACKAGES[@]}; do
+        if brew ls --versions $package > /dev/null; then
+                echo "$package is installed"
+        else
+                echo "installing $package"
+                brew install $package
+        fi
+done
+
+
+echo "Add script path to PATH"
+export PATH=$PATH:~/bin
+
+echo "Useful scripts"
+ln -sf ~/programs/python/days_left ~/bin
+ln -sf ~/programs/python/clitter/clitter ~/bin
+ln -sf ~/programs/bash/setuptmux ~/bin
+ln -sf ~/programs/bash/bdump ~/bin
+ln -sf ~/programs/bash/updatespellcheck ~/bin
+

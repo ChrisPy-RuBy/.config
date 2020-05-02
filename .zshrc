@@ -3,6 +3,7 @@
 #########################
 
 # If you come from bash you might have to change your $PATH.
+export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -125,7 +126,7 @@ alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simp
 export GOPATH=$HOME/dev 
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
 ##############################
@@ -144,7 +145,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # to the custom folder
 
 #spark hacking
-#export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+# export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 #export SPARK_HOME=/Users/chriswoodall/spark/2.3.0_2.7/spark-2.3.0-bin-hadoop2.7
 #export PATH=$SPARK_HOME/bin:$PATH
 #export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
