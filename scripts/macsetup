@@ -2,7 +2,8 @@
 set -euo pipefail
 
 echo "Linking .zshrc"
-ln -sf ~/.config/.zshrc ~/.zshrc
+ln -sf $HOME/.config/zsh/.zshrc $HOME/.zshrc
+ln -sf $HOME/.config/zsh/general.zsh $HOME/.oh-my-zsh/custom
 echo "Linking .vimrc"
 ln -sf ~/.config/.vimrc ~/.vimrc
 
@@ -43,4 +44,9 @@ ln -sf ~/programs/python/clitter/clitter ~/bin
 ln -sf ~/programs/bash/setuptmux ~/bin
 ln -sf ~/programs/bash/bdump ~/bin
 ln -sf ~/programs/bash/updatespellcheck ~/bin
+
+# update aspell dictionary
+echo "updating spell check"
+updatespellcheck
+
 

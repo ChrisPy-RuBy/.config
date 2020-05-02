@@ -54,3 +54,6 @@ virtualbox
 postgres
 FZF
 fzf
+autoformat
+qa
+spellcheck
