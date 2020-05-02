@@ -1,7 +1,8 @@
-set incsearch   " ingore case search
+set incsearch   " ignore case search
 set hlsearch    " highlight search results
 set ignorecase 
 set spell       " turn spell check on/off
+set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
 set cursorline  " cursorline
 set number      " line numbers
 set showmatch   " highlight matching
@@ -9,7 +10,7 @@ set foldmethod=indent
 
 syntax on       " syntax highlighting
 colorscheme molokai   
-filetype indent on " file specific indentin   
+filetype indent on " file specific indenting   
 set wildmenu    " visual menu for looking at files
 
 set tabstop=4   " tab vs spaces indentation
@@ -53,7 +54,7 @@ filetype off
 " execute pathogen#infect()
 " filetype plugin indent on
 
-" COC comfig
+" COC config
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -72,6 +73,10 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
+
+hi clear SpellBad
+hi SpellBad cterm=underline,bold
+hi SpellBad ctermfg=015 ctermbg=009 cterm=bold guibg=#ff0000 guifg=#000000 gui=bold
 
 
 if has('mac')
@@ -116,7 +121,7 @@ if has('mac')
           endif
         endfunction
 
-        " Highlight symbol under cursor hrisPy-RuBy/docs.gihrisPy-RuBy/docs.git
+        " Highlight symbol under cursor 
          autocmd CursorHold * silent call CocActionAsync('highlight')
 
         " Remap for rename current word
