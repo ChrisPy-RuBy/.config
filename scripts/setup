@@ -25,14 +25,18 @@ BREW_CASKS=(
         "virtualbox"
 )
 
-for package in ${BREW_PACKAGES[@]}; do
-        if brew ls --versions $package > /dev/null; then
-                echo "$package is installed"
-        else
-                echo "installing $package"
-                brew install $package
-        fi
-done
+if [[ $OSTYPE =~ "darwin" ]]; then
+        for package in ${BREW_PACKAGES[@]}; do
+                if brew ls --versions $package > /dev/null; then
+                        echo "$package is installed"
+                else
+                        echo "installing $package"
+                        brew install $package
+                fi
+        done
+elif [[ $OSTYPE =~ "linux-gnu" ]]; then
+        echo "install relevant linux shiz"
+fi
 
 
 echo "Add script path to PATH"
