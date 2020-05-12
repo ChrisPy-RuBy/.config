@@ -47,6 +47,7 @@ ln -sf ~/programs/python/days_left ~/bin
 ln -sf ~/programs/python/clitter/clitter ~/bin
 ln -sf ~/programs/bash/setuptmux ~/bin
 ln -sf ~/programs/bash/bdump ~/bin
+ln -sf $HOME/programs/bash/qa $HOME/bin
 ln -sf ~/programs/bash/updatespellcheck ~/bin
 
 # update aspell dictionary

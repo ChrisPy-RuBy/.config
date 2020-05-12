@@ -128,7 +128,7 @@ alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simp
 export GOPATH=$HOME/dev 
 
 # Java
-# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
 ##############################
