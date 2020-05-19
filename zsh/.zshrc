@@ -28,6 +28,8 @@ days_left
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
 alias bd='~/labbook/docs/braindump.md'
 alias month="cal -A 1 -B 1"
+alias gdate=date
+
 
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
