@@ -35,31 +35,34 @@ Plug 'airblade/vim-gitgutter'
 " Formatting etc
 " autoformat
 Plug 'Chiel92/vim-autoformat'
-
 Plug 'machakann/vim-sandwich'
+
+" COC code complete
+" Use release branch
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Or latest tag
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+" Or build from source code by use yarn: https://yarnpkg.com
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'dense-analysis/ale'
+
+
+
 
 " setings for mac
 if has('mac')
-        " COC code complete
-        " Use release branch
-        Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        " Or latest tag
-        "Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-        " Or build from source code by use yarn: https://yarnpkg.com
-        "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-
         " Dash doc lookup
         Plug 'rizzatti/dash.vim'
-        Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
         " autoformat python code
         Plug 'psf/black.vim'
 else
         "linting
-        Plug 'dense-analysis/ale'
 endif
 
-
+" TRIAL PLUGINS
+Plug 'frazrepo/vim-rainbow'
 
 " Initialize plugin system
 call plug#end()
