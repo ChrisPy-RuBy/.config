@@ -37,7 +37,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'machakann/vim-sandwich'
 
-" COC code complete
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Or latest tag
@@ -45,10 +44,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Or build from source code by use yarn: https://yarnpkg.com
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
+"linting
 Plug 'dense-analysis/ale'
-
-
-
 
 " setings for mac
 if has('mac')
@@ -58,7 +56,7 @@ if has('mac')
         " autoformat python code
         Plug 'psf/black.vim'
 else
-        "linting
+        " stuff
 endif
 
 " TRIAL PLUGINS
