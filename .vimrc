@@ -1,3 +1,5 @@
+let g:rainbow_active = 1
+autocmd VimEnter * RainbowToggle
 set incsearch   " ignore case search
 set hlsearch    " highlight search results
 set ignorecase 
