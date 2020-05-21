@@ -1,3 +1,5 @@
+
+" SEARCHING
 set incsearch   " ignore case search
 set hlsearch    " highlight search results
 set ignorecase 
@@ -7,6 +9,8 @@ set cursorline  " cursorline
 set number      " line numbers
 set showmatch   " highlight matching
 set foldmethod=indent
+set splitbelow
+set splitright
 
 syntax on       " syntax highlighting
 colorscheme molokai   
@@ -21,6 +25,7 @@ set bs=2 " add backspace matching
 " key mappings while in insert mode.
 imap jj <esc>  " stop pressing esc all the time
 imap kk <esc>  " stop pressing esc all the time
+imap jk <esc>  " stop pressing esc all the time
 imap hh #
 
 " sensible window switching
