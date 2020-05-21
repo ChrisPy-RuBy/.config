@@ -1,5 +1,6 @@
 
 " SEARCHING
+autocmd VimEnter * RainbowToggle
 set incsearch   " ignore case search
 set hlsearch    " highlight search results
 set ignorecase 
@@ -82,6 +83,11 @@ set signcolumn=yes
 hi clear SpellBad
 hi SpellBad cterm=underline,bold
 hi SpellBad ctermfg=015 ctermbg=009 cterm=bold guibg=#ff0000 guifg=#000000 gui=bold
+
+
+" PLUGIN CONFIG
+" use rainbow brackets plugin
+let g:rainbow_active = 1
 
 
 if has('mac')

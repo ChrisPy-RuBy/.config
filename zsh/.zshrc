@@ -30,6 +30,8 @@ setuptmux -s life
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
 alias bd='~/labbook/docs/braindump.md'
 alias month="cal -A 1 -B 1"
+alias gdate=date
+
 
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -130,7 +132,7 @@ alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simp
 export GOPATH=$HOME/dev 
 
 # Java
-# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
 ##############################
