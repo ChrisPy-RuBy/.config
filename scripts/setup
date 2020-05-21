@@ -11,7 +11,6 @@ BREW_PACKAGES=(
         "aspell" 
         "fzf"
         "htop" 
-        "mkdocs"
         "postgres"
         "shellcheck"
         "the_silver_searcher"
@@ -24,6 +23,10 @@ BREW_CASKS=(
         "things3"
         "virtualbox"
 )
+
+PYTHON_REQUIREMENTS=("mkdocs"
+                     "pymdown-extensions"
+                     "mkdocs-material")
 
 if [[ $OSTYPE =~ "darwin" ]]; then
         for package in ${BREW_PACKAGES[@]}; do

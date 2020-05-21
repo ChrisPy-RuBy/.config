@@ -25,6 +25,8 @@ ZSH_THEME="agnoster"
 
 # run on startup
 days_left
+setuptmux -s labbook
+setuptmux -s life
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
 alias bd='~/labbook/docs/braindump.md'
 alias month="cal -A 1 -B 1"
