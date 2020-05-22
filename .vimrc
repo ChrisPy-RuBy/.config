@@ -48,6 +48,15 @@ nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
+" bracket autoclose
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " ----> ADVANCED CONFIG
 set spell       " turn spell check on/off
 set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
