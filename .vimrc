@@ -13,8 +13,6 @@ syntax on       " syntax highlighting
 filetype indent on " file specific indenting   
 set wildmenu    " visual menu for looking at files
 
-set lines=40
-set columns=120
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4

@@ -6,7 +6,7 @@
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -134,6 +134,8 @@ export GOPATH=$HOME/dev
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+# Ruby
+eval "$(rbenv init -)"
 
 ##############################
 ### TOOL SPECIFIC SETTINGS ###
