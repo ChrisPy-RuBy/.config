@@ -7,6 +7,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
