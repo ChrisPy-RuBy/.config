@@ -37,6 +37,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'machakann/vim-sandwich'
 
+
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Or latest tag
@@ -60,7 +61,7 @@ else
 endif
 
 " TRIAL PLUGINS
-Plug 'frazrepo/vim-rainbow'
+Plug 'frazrepo/vim-rainbow'   " colour pairing brackets
 
 " Initialize plugin system
 call plug#end()

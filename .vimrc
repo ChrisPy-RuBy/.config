@@ -6,6 +6,7 @@ set cursorline  " cursorline
 set number      " line numbers
 set showmatch   " highlight matching
 set foldmethod=indent
+let g:markdown_folding = 1
 set splitbelow
 set splitright
 
@@ -54,6 +55,14 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+
+nnoremap <leader>e :split ~/.config/.vimrc
+
+:nnoremap <C-t> :NERDTreeToggle<CR>
+:nnoremap <C-f> :FZF<CR>
+vnoremap g= :!sqlformat --reindent --keywords upper --identifiers lower -<cr>
+
 
 " ----> ADVANCED CONFIG
 set spell       " turn spell check on/off
