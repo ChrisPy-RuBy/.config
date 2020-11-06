@@ -8,6 +8,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -122,12 +123,16 @@ export EDITOR='vim'
 
 
 alias ip='ipython'
-export PYTHONBREAKPOINT='ipdb.set_trace'
+export PYTHONBREAKPOINT='web_pdb.set_trace'
 export PYTHONPATH="$PYTHONPATH:/Users/chriswoodall/spark/latest/python"
-export PYSPARK_PYTHON="/usr/local/bin/python3"
+#export PYSPARK_PYTHON="/usr/local/bin/python3"
+export PYSPARK_PYTHON="/Users/chriswoodall/.pyenv/shims/python3"
 alias python="python3"
 alias flake8='function _flake8(){ flake8 --max-line-length=121 $1;};_flake8' 
 alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simple/ $1; };_pipreal'
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # GO 
 export GOPATH=$HOME/dev 

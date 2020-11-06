@@ -28,6 +28,7 @@ BREW_CASKS=(
 
 PYTHON_REQUIREMENTS=("mkdocs"
                      "pymdown-extensions"
+					 "neovim"
                      "mkdocs-material")
 
 if [[ $OSTYPE =~ "darwin" ]]; then
