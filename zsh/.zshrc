@@ -129,7 +129,7 @@ export PYSPARK_PYTHON="/Users/chriswoodall/.pyenv/shims/python3"
 alias python="python3"
 alias flake8='function _flake8(){ flake8 --max-line-length=121 $1;};_flake8' 
 alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simple/ $1; };_pipreal'
-export PATH="/Users/chriswoodall/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
