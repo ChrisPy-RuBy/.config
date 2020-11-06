@@ -14,7 +14,9 @@ BREW_PACKAGES=(
         "postgres"
         "shellcheck"
         "the_silver_searcher"
+		"tldr"
         "tmux" 
+		"tree"
 )
 
 BREW_CASKS=(
