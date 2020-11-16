@@ -29,7 +29,24 @@ BREW_CASKS=(
 PYTHON_REQUIREMENTS=("mkdocs"
                      "pymdown-extensions"
 					 "neovim"
-                     "mkdocs-material")
+                     "mkdocs-material"
+					 "matplotlib"
+				     "pandas"
+					 "requests"
+					 "flake8"
+					 "mypy"
+					 "black"
+					 "ipython"
+)
+
+global_pip () {
+	echo "update pip"
+	pip install --upgrade pip
+	for p in ${PYTHON_REQUIREMENTS[@]}; do
+		echo "pipx installing $p"
+		pip install $p
+	done
+}
 
 if [[ $OSTYPE =~ "darwin" ]]; then
 		# check homebrew is installed
@@ -43,8 +60,11 @@ if [[ $OSTYPE =~ "darwin" ]]; then
                         brew install $package
                 fi
         done
+		global_pip
+
 elif [[ $OSTYPE =~ "linux-gnu" ]]; then
         echo "install relevant linux shiz"
+		global_pip
 fi
 
 
