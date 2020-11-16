@@ -12,6 +12,7 @@ BREW_PACKAGES=(
         "fzf"
         "htop" 
         "postgres"
+		"pyenv"
         "shellcheck"
         "the_silver_searcher"
 		"tldr"
@@ -23,6 +24,7 @@ BREW_CASKS=(
         "alfred"
         "dash"
         "things3"
+		"spotify"
         "virtualbox"
 )
 
@@ -42,9 +44,9 @@ PYTHON_REQUIREMENTS=("mkdocs"
 global_pip () {
 	echo "update pip"
 	pip install --upgrade pip
-	for p in ${PYTHON_REQUIREMENTS[@]}; do
-		echo "pipx installing $p"
-		pip install $p
+	for p in "${PYTHON_REQUIREMENTS[@]}"; do
+		echo "pip installing $p"
+		pip install "$p"
 	done
 }
 
@@ -52,7 +54,7 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 		# check homebrew is installed
 		command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
-        for package in ${BREW_PACKAGES[@]}; do
+        for package in "${BREW_PACKAGES[@]}"; do
                 if brew ls --versions $package > /dev/null; then
                         echo "$package is installed"
                 else
