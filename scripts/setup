@@ -28,17 +28,19 @@ BREW_CASKS=(
         "virtualbox"
 )
 
-PYTHON_REQUIREMENTS=("mkdocs"
-                     "pymdown-extensions"
-					 "neovim"
-                     "mkdocs-material"
-					 "matplotlib"
-				     "pandas"
-					 "requests"
-					 "flake8"
-					 "mypy"
+PYTHON_REQUIREMENTS=(
 					 "black"
+					 "flake8"
 					 "ipython"
+					 "matplotlib"
+					 "mypy"
+					 "neovim"
+					 "requests"
+				     "pandas"
+                     "jupyter"
+                     "mkdocs"
+                     "mkdocs-material"
+                     "pymdown-extensions"
 )
 
 global_pip () {
