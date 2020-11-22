@@ -57,11 +57,14 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
 
-nnoremap <leader>e :split ~/.config/.vimrc
-
-:nnoremap <C-t> :NERDTreeToggle<CR>
-:nnoremap <C-f> :FZF<CR>
+noremap <leader>0 :split ~/.config/.vimrc
+nnoremap <leader>1 :NERDTreeToggle<CR>
+nnoremap <leader>2 :FZF<CR>
+nnoremap <leader>3 :%! autopep8 -
+nnoremap <leader>= zr
+nnoremap <leader>- zm
 vnoremap g= :!sqlformat --reindent --keywords upper --identifiers lower -<cr>
+
 
 
 " ----> ADVANCED CONFIG

@@ -29,10 +29,13 @@ ZSH_THEME="agnoster"
 days_left
 setuptmux -s labbook
 setuptmux -s life
+alias c="cd $HOME/.config"
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
 alias bd='~/labbook/docs/braindump.md'
 alias month="cal -A 1 -B 1"
 alias gdate=date
+alias sourcevim="vim $HOME/.vimrc; source $HOME/.vimrc"
+alias sourcezsh="vim $HOME/.zshrc; source $HOME/.zshrc"
 
 
 
