@@ -2,10 +2,12 @@
 set -euo pipefail
 
 echo "Linking .zshrc"
-ln -sf $HOME/.config/zsh/.zshrc $HOME/.zshrc
-ln -sf $HOME/.config/zsh/general.zsh $HOME/.oh-my-zsh/custom
+ln -sf "$HOME/.config/zsh/.zshrc" "$HOME/.zshrc"
+ln -sf "$HOME/.config/zsh/general.zsh" "$HOME/.oh-my-zsh/custom"
 echo "Linking .vimrc"
-ln -sf ~/.config/.vimrc ~/.vimrc
+ln -sf "$HOME/.config/.vimrc" "$HOME/.vimrc"
+echo "Linking ipython conf"
+
 
 BREW_PACKAGES=(
         "aspell" 
@@ -76,15 +78,23 @@ echo "Add script path to PATH"
 export PATH=$PATH:~/bin
 
 echo "Useful scripts"
-ln -sf ~/programs/python/days_left ~/bin
-ln -sf ~/programs/python/clitter/clitter ~/bin
-ln -sf ~/programs/bash/setuptmux ~/bin
-ln -sf ~/programs/bash/bdump ~/bin
-ln -sf $HOME/programs/bash/qa $HOME/bin
-ln -sf ~/programs/bash/updatespellcheck ~/bin
+ln -sf "$HOME/programs/python/days_left" "$HOME/bin"
+ln -sf "$HOME/programs/python/clitter/clitter" "$HOME/bin"
+ln -sf "$HOME/programs/python/getip" "$HOME/bin"
+ln -sf "$HOME/programs/bash/bdump" "$HOME/bin"
+ln -sf "$HOME/programs/bash/listener" "$HOME/bin"
+ln -sf "$HOME/programs/bash/talker" "$HOME/bin"
+ln -sf "$HOME/programs/bash/qa" "$HOME/bin"
+ln -sf "$HOME/programs/bash/setuptmux" "$HOME/bin"
+ln -sf "$HOME/programs/bash/updatespellcheck" "$HOME/bin"
+
 
 # update aspell dictionary
 echo "updating spell check"
 updatespellcheck
+
+# make sure vim is up to date
+nvim --headless +PlugInstall +qall
+
 
 

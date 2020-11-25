@@ -36,6 +36,7 @@ alias month="cal -A 1 -B 1"
 alias gdate=date
 alias sourcevim="vim $HOME/.vimrc; source $HOME/.vimrc"
 alias sourcezsh="vim $HOME/.zshrc; source $HOME/.zshrc"
+alias setup="bash -c $HOME/.config/scripts/setup"
 
 
 
