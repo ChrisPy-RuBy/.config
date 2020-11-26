@@ -2,12 +2,17 @@
 ## THINGS TO DO FIRST ###
 #########################
 
-# If you come from bash you might have to change your $PATH.
+##
+## PATH STUFF
+##
+alias path='echo $PATH | tr -s ":" "\n"'
+export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
@@ -29,6 +34,7 @@ ZSH_THEME="agnoster"
 days_left
 setuptmux -s labbook
 setuptmux -s life
+alias setup="$HOME/.config/scripts/setup"
 alias conf="cd $HOME/.config"
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
 alias bd='~/labbook/docs/braindump.md'
@@ -37,7 +43,10 @@ alias gdate=date
 alias sourcevim="vim $HOME/.vimrc; source $HOME/.vimrc"
 alias sourcezsh="vim $HOME/.zshrc; source $HOME/.zshrc"
 alias setup="bash -c $HOME/.config/scripts/setup"
-
+alias ls='ls -GFh'
+alias d="cd ~/Downloads"
+alias workalias="vim $HOME/.oh-my-zsh/custom/tvs.zsh"
+alias generalalias="vim $HOME/.oh-my-zsh/general.zsh"
 
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -134,7 +143,6 @@ export PYSPARK_PYTHON="/Users/chriswoodall/.pyenv/shims/python3"
 alias python="python3"
 alias flake8='function _flake8(){ flake8 --max-line-length=121 $1;};_flake8' 
 alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simple/ $1; };_pipreal'
-export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 
@@ -159,27 +167,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ### WORK SPECIFIC ALIASES, FUNCTIONS ETC ##
 ###########################################
 
-# NOTE: The bulk of this has been moved to ~/.aliases/tvs.zsh and symlinked 
+# NOTE: The bulk of this has been moved to ~/.oh-my-zsh/tvs.zsh and symlinked 
 # to the custom folder
-
-#spark hacking
-# export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-#export SPARK_HOME=/Users/chriswoodall/spark/2.3.0_2.7/spark-2.3.0-bin-hadoop2.7
-#export PATH=$SPARK_HOME/bin:$PATH
-#export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
-#export PYSPARK_SUBMIT_ARGS=pyspark-shell
-
 
 #####################
 ## TEMPORARY HACKERY (DONT PUT THINGS HERE YOU WANT TO KEEP) 
 #####################
 #
-#export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib":$DYLD_FALLBACK_LIBRARY_PATH
-#export HADOOP_VERSION=3.2.1
-#export HADOOP_HOME=/usr/local/Cellar/hadoop/3.2.1_1/libexec
-#export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop/
-#export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
-
-#export HADOOP_OPTS="-Djava.library.path=${HADOOP_HOME}/lib/native"
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HADOOP_HOME}/lib/native
-#export JAVA_LIBRARY_PATH=$JAVA_LIBRARY_PATH:${HADOOP_HOME}/lib/native

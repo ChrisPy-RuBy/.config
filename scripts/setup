@@ -9,6 +9,21 @@ ln -sf "$HOME/.config/.vimrc" "$HOME/.vimrc"
 echo "Linking ipython conf"
 
 
+echo "Add script path to PATH"
+export PATH=$PATH:~/bin
+echo "Useful scripts"
+ln -sf ~/programs/python/days_left ~/bin
+ln -sf ~/programs/python/clitter/clitter ~/bin
+ln -sf ~/programs/bash/setuptmux ~/bin
+ln -sf ~/programs/bash/bdump ~/bin
+ln -sf $HOME/programs/bash/qa $HOME/bin
+ln -sf ~/programs/bash/updatespellcheck ~/bin
+
+# update aspell dictionary
+echo "updating spell check"
+updatespellcheck
+
+
 BREW_PACKAGES=(
         "aspell" 
         "fzf"
@@ -73,7 +88,6 @@ elif [[ $OSTYPE =~ "linux-gnu" ]]; then
 		global_pip
 fi
 
-
 echo "Add script path to PATH"
 export PATH=$PATH:~/bin
 
@@ -95,6 +109,3 @@ updatespellcheck
 
 # make sure vim is up to date
 nvim --headless +PlugInstall +qall
-
-
-
