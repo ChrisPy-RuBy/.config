@@ -46,6 +46,7 @@ BREW_CASKS=(
 )
 
 PYTHON_REQUIREMENTS=(
+                     "autopep8"
 					 "black"
 					 "flake8"
 					 "ipython"
