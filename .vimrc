@@ -60,11 +60,13 @@ noremap <leader>0 :split ~/.config/.vimrc
 nnoremap <leader>1 :NERDTreeToggle<CR>
 nnoremap <leader>2 :FZF<CR>
 nnoremap <leader>3 :%! autopep8 -
+nnoremap <leader>4 ::let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
+nnoremap <leader>5 :%! autopep8 -
+nnoremap <leader>6 :%! autopep8 -
+nnoremap <leader>7 :%! autopep8 -
 nnoremap <leader>= zr
 nnoremap <leader>- zm
 vnoremap g= :!sqlformat --reindent --keywords upper --identifiers lower -<cr>
-
-
 
 " ----> ADVANCED CONFIG
 set spell       " turn spell check on/off

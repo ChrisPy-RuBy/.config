@@ -173,4 +173,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #####################
 ## TEMPORARY HACKERY (DONT PUT THINGS HERE YOU WANT TO KEEP) 
 #####################
-#
+
+
+export COGNITIVE_SERVICE_KEY="66e727107f7f4924a2f51aa571476494"
+
