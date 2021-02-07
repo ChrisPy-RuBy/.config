@@ -32,6 +32,7 @@ ZSH_THEME="agnoster"
 
 # run on startup
 days_left
+date "+%Y %m" | xargs rulesforlife
 setuptmux -s labbook
 setuptmux -s life
 alias setup="$HOME/.config/scripts/setup"
@@ -150,7 +151,7 @@ eval "$(pyenv init -)"
 export GOPATH=$HOME/dev 
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # Ruby
 eval "$(rbenv init -)"
