@@ -48,6 +48,7 @@ alias ls='ls -GFh'
 alias d="cd ~/Downloads"
 alias workalias="vim $HOME/.oh-my-zsh/custom/tvs.zsh"
 alias generalalias="vim $HOME/.oh-my-zsh/general.zsh"
+alias activate='. ./.env/bin/activate'
 
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -144,6 +145,7 @@ export PYSPARK_PYTHON="/Users/chriswoodall/.pyenv/shims/python3"
 alias python="python3"
 alias flake8='function _flake8(){ flake8 --max-line-length=121 $1;};_flake8' 
 alias pipreal='function _pipreal(){ pip3 install -i https://pypi.python.org/simple/ $1; };_pipreal'
+alias venvup='function _venvup(){python3 -m venv .env; source ./.env/bin/activate; python3 -m pip install --upgrade pip};_venvup'
 eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 

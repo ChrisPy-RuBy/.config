@@ -82,6 +82,10 @@ nnoremap <leader>- zm
 vnoremap g= :!sqlformat --reindent --keywords upper --identifiers lower -<cr>
 
 " ----> ADVANCED CONFIG
+"  speed
+set lazyredraw
+
+" spelling
 set spell       " turn spell check on/off
 set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
 colorscheme molokai   
