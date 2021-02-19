@@ -84,6 +84,8 @@ echo "Add script path to PATH"
 export PATH=$PATH:~/bin
 
 echo "Useful scripts"
+cd $HOME/tools/c && make all
+find $HOME/tools/c -type f -not \( -name \*.c -or -name Makefile \) -exec ln -sf \{\} "$HOME/bin" \;
 
 for file in $HOME/tools/python/*; do
         ln -sf "$file" "$HOME/bin"
@@ -93,7 +95,6 @@ for file in $HOME/tools/bash/*; do
         ln -sf "$file" "$HOME/bin"
 done;
 
-cd $HOME/tools/c && make all
 # update aspell dictionary
 echo "updating spell check"
 updatespellcheck
