@@ -5,7 +5,7 @@
 ##
 ## PATH STUFF
 ##
-alias path='echo $PATH | tr -s ":" "\n"'
+alias viewpath='echo $PATH | tr -s ":" "\n"'
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
@@ -22,6 +22,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
+source .access_keys
 
 #####################################
 ## GENERAL SCRIPTS TO LOAD OR RUN ###
@@ -176,7 +177,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #####################
 ## TEMPORARY HACKERY (DONT PUT THINGS HERE YOU WANT TO KEEP) 
 #####################
-
-
-export COGNITIVE_SERVICE_KEY="66e727107f7f4924a2f51aa571476494"
 

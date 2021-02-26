@@ -7,9 +7,13 @@ ln -sf "$HOME/.config/zsh/general.zsh" "$HOME/.oh-my-zsh/custom"
 echo "Linking .vimrc"
 ln -sf "$HOME/.config/.vimrc" "$HOME/.vimrc"
 echo "Linking ipython conf"
-ln -sf "$HOME/.config/.vimrc" "$HOME/.ideavimrc"
-echo "pycharm vim"
 
+echo "pycharm vim"
+ln -sf "$HOME/.config/.vimrc" "$HOME/.ideavimrc"
+
+echo "setup labbook"
+ln -sf "$HOME/labbook/docs/mkdocs.yml" "$HOME/labbook/"
+ln -sf "$HOME/life/docs/Work/tvs.md" "$HOME/labbook/docs/"
 
 echo "Add script path to PATH"
 export PATH=$PATH:~/bin
