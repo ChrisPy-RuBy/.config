@@ -62,7 +62,6 @@ vnoremap <leader>P "+P
 
 " bracket autoclose
 inoremap " ""<left>
-inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
@@ -74,8 +73,8 @@ nnoremap <leader>1 :NERDTreeToggle<CR>
 nnoremap <leader>2 :FZF<CR>
 nnoremap <leader>3 :%! autopep8 -
 nnoremap <leader>4 ::let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
-nnoremap <leader>5 :%! autopep8 -
-nnoremap <leader>6 :%! autopep8 -
+nnoremap <leader>5 :TagbarToggle<CR>
+nnoremap <leader>6 :%! ctags R . 
 nnoremap <leader>7 :%! autopep8 -
 nnoremap <leader>= zr
 nnoremap <leader>- zm
@@ -99,6 +98,28 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp*,/private/tmp/*
 set directory=/~/.vim-tmp,~/.tmp,~/tmp,var/tmp,tmp
 set writebackup
+
+"filetype specific config
+filetype plugin indent on
+
+autocmd filetype python call tagbar#autoopen(0)
+autocmd filetype c call tagbar#autoopen(0)
+" Add support for markdown files in tagbar.
+" let g:md_ctags_bin=fnamemodify(stdpath('config')."~/.config/nvim/tools/markdown2ctags.py", ":p")
+let g:tagbar_type_markdown = {
+    \ 'ctagstype': 'markdown',
+    \ 'ctagsbin' : "$HOME/.config/nvim/tools/markdown2ctags/markdown2ctags.py",
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+    \ }
 
 " ---> PLUGINS
 autocmd VimEnter * RainbowToggle

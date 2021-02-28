@@ -37,6 +37,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'machakann/vim-sandwich'
 
+" plugin for ctags
+Plug 'majutsushi/tagbar'
 
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

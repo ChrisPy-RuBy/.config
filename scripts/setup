@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+cwd=$PWD
 echo "Linking .zshrc"
 ln -sf "$HOME/.config/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.config/zsh/general.zsh" "$HOME/.oh-my-zsh/custom"
@@ -17,6 +18,9 @@ ln -sf "$HOME/life/docs/Work/tvs.md" "$HOME/labbook/docs/"
 
 echo "Add script path to PATH"
 export PATH=$PATH:~/bin
+
+echo "get my repos"
+cd $HOME/tools && git pull --rebase --autostash
 
 BREW_PACKAGES=(
         "aspell" 
