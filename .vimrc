@@ -108,7 +108,7 @@ autocmd filetype c call tagbar#autoopen(0)
 " let g:md_ctags_bin=fnamemodify(stdpath('config')."~/.config/nvim/tools/markdown2ctags.py", ":p")
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
-    \ 'ctagsbin' : "$HOME/.config/nvim/tools/markdown2ctags/markdown2ctags.py",
+    \ 'ctagsbin' : "$HOME/.vim/plugged/markdown2ctags/markdown2ctags.py",
     \ 'ctagsargs' : '-f - --sort=yes',
     \ 'kinds' : [
         \ 's:sections',

@@ -39,6 +39,7 @@ Plug 'machakann/vim-sandwich'
 
 " plugin for ctags
 Plug 'majutsushi/tagbar'
+Plug 'jszakmeister/markdown2ctags'
 
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
