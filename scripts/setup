@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cwd=$PWD
 echo "Linking .zshrc"
 ln -sf "$HOME/.config/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.config/zsh/general.zsh" "$HOME/.oh-my-zsh/custom"
@@ -24,6 +23,7 @@ cd $HOME/tools && git pull --rebase --autostash
 
 BREW_PACKAGES=(
         "aspell" 
+        "ctags"
         "fzf"
         "htop" 
         "postgres"
