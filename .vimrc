@@ -75,7 +75,7 @@ nnoremap <leader>3 :%! autopep8 -
 nnoremap <leader>4 ::let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
 nnoremap <leader>5 :TagbarToggle<CR>
 nnoremap <leader>6 :%! ctags R . 
-nnoremap <leader>7 :%! autopep8 -
+nnoremap <leader>7 :Ag<CR>
 nnoremap <leader>= zr
 nnoremap <leader>- zm
 vnoremap g= :!sqlformat --reindent --keywords upper --identifiers lower -<cr>

@@ -22,20 +22,19 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
-source .access_keys
+source $HOME/.access_keys
 
 #####################################
 ## GENERAL SCRIPTS TO LOAD OR RUN ###
 #####################################
 
 #include Z
-. ~/.config/scripts/z.sh
+. $HOME/.config/scripts/z.sh
 
 # run on startup
 days_left
 date "+%Y %m" | xargs rulesforlife
 setuptmux -s labbook
-setuptmux -s life
 alias setup="$HOME/.config/scripts/setup"
 alias conf="cd $HOME/.config"
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
@@ -138,7 +137,7 @@ export EDITOR='vim'
 ################################
 
 
-alias ip='ipython'
+alias ipy='ipython'
 export PYTHONBREAKPOINT='web_pdb.set_trace'
 export PYTHONPATH="$PYTHONPATH:/Users/chriswoodall/spark/latest/python"
 #export PYSPARK_PYTHON="/usr/local/bin/python3"
