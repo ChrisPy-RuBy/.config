@@ -15,6 +15,9 @@ echo "setup labbook"
 ln -sf "$HOME/labbook/docs/mkdocs.yml" "$HOME/labbook/"
 ln -sf "$HOME/life/docs/Work/tvs.md" "$HOME/labbook/docs/"
 
+echo "tmux conf"
+ln -sf "$HOME/.config/tmux/.tmux.conf" "$HOME/"
+
 echo "Add script path to PATH"
 export PATH=$PATH:~/bin
 
