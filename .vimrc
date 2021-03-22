@@ -103,6 +103,7 @@ set writebackup
 filetype plugin indent on
 
 autocmd filetype python call tagbar#autoopen(0)
+autocmd filetype markdown call tagbar#autoopen(0)
 autocmd filetype c call tagbar#autoopen(0)
 " Add support for markdown files in tagbar.
 " let g:md_ctags_bin=fnamemodify(stdpath('config')."~/.config/nvim/tools/markdown2ctags.py", ":p")

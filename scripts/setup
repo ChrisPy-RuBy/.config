@@ -49,6 +49,7 @@ BREW_CASKS=(
 PYTHON_REQUIREMENTS=(
                      "autopep8"
 					 "black"
+					 "csvkit"
 					 "flake8"
 					 "ipython"
 					 "matplotlib"

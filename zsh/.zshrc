@@ -1,27 +1,47 @@
-#########################
-## THINGS TO DO FIRST ###
-#########################
+#####################
+## CONFIG§
+#####################
 
-##
-## PATH STUFF
-##
-alias viewpath='echo $PATH | tr -s ":" "\n"'
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
+EDITOR=nvim
+PAGER=vimpager
 
+# zsh  config
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+export ZSH=$HOME/.oh-my-zsh
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 ZSH_THEME="agnoster"
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+labbook () {
+
+	tmux a -t labbook
+	if [[ $? -eq 1 ]]; then
+		setuptmux -s labbook
+		tmux a -t labbook
+	fi
+}
+
+diary () {
+
+	tmux a -t diary
+	if [[ $? -eq 1 ]]; then
+		setuptmux -s diary 
+		tmux a -t diary
+	fi
+}
+
+#####################h
+## PATHS 
+######################
+
+# PATH stuff now in .zprofle
+
+
 source $HOME/.access_keys
 
 #####################################
@@ -34,11 +54,10 @@ source $HOME/.access_keys
 # run on startup
 days_left
 date "+%Y %m" | xargs rulesforlife
-setuptmux -s labbook
+setuptmux -s labbookserver
 alias setup="$HOME/.config/scripts/setup"
 alias conf="cd $HOME/.config"
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
-alias bd='~/labbook/docs/braindump.md'
 alias month="cal -A 1 -B 1"
 alias gdate=date
 alias sourcevim="vim $HOME/.vimrc; source $HOME/.vimrc"
@@ -50,28 +69,6 @@ alias workalias="vim $HOME/.oh-my-zsh/custom/tvs.zsh"
 alias generalalias="vim $HOME/.oh-my-zsh/general.zsh"
 alias activate='. ./.env/bin/activate'
 
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -153,8 +150,8 @@ eval "$(pyenv init -)"
 export GOPATH=$HOME/dev 
 
 # Java
-#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # Ruby
 eval "$(rbenv init -)"
