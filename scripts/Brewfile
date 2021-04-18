@@ -1,0 +1,27 @@
+# specify a directory to install
+cask_args appdir: '/Applications'
+
+# install packages
+tap 'caskroom/homebrew-cask' || true
+
+brew "aspell" 
+brew "bats"
+brew "ctags"
+brew "exa"
+brew "fzf"
+brew "htop" 
+brew "postgres"
+brew "pyenv"
+brew "shellcheck"
+brew "the_silver_searcher"
+brew "tldr"
+brew "tmux" 
+brew "tree"
+# apps
+cask "alfred"
+cask "dash"
+cask "things3"
+cask "slack"
+cask "spotify"
+cask "virtualbox"
+

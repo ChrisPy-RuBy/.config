@@ -34,6 +34,22 @@ diary () {
 		tmux a -t diary
 	fi
 }
+	
+
+cat () {
+
+	if [[ -x /usr/local/bin/bat ]]; then
+		bat $@
+	else
+		cat $@
+	fi
+}
+
+
+gtticket () {
+	cd $WORK/tvsquared-backend; arc browse "$@"
+}
+
 
 #####################h
 ## PATHS 
@@ -54,7 +70,8 @@ source $HOME/.access_keys
 # run on startup
 days_left
 date "+%Y %m" | xargs rulesforlife
-setuptmux -s labbookserver
+alias labbookup="setuptmux -s labbookserver"
+alias labup="setuptmux -s labserver"
 alias setup="$HOME/.config/scripts/setup"
 alias conf="cd $HOME/.config"
 alias labfind="cd ~/labbook/docs; ag --nobreak --nonumbers --noheading . | fzf | python3 ~/programs/python/labbook_directions.py"
@@ -151,6 +168,7 @@ export GOPATH=$HOME/dev
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# export JAVA_HOME='/usr/local/opt/openjdk@8'
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # Ruby
@@ -175,3 +193,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ## TEMPORARY HACKERY (DONT PUT THINGS HERE YOU WANT TO KEEP) 
 #####################
 
+# BEGIN ANSIBLE MANAGED BLOCK
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYTHONPATH="$HOME/spark/latest/python:$PYTHONPATH"
+# END ANSIBLE MANAGED BLOCK

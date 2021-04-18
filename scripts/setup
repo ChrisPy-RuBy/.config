@@ -4,6 +4,8 @@ set -euo pipefail
 echo "Linking .zshrc"
 ln -sf "$HOME/.config/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.config/zsh/general.zsh" "$HOME/.oh-my-zsh/custom"
+ln -sf "$HOME/.config/zsh/.zprofile" "$HOME/.zprofile"
+
 echo "Linking .vimrc"
 ln -sf "$HOME/.config/.vimrc" "$HOME/.vimrc"
 echo "Linking ipython conf"
