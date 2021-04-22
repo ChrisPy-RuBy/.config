@@ -17,6 +17,7 @@ brew "the_silver_searcher"
 brew "tldr"
 brew "tmux" 
 brew "tree"
+brew "visidata"
 # apps
 cask "alfred"
 cask "dash"
